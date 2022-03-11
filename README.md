@@ -14,11 +14,11 @@ vscode 插件
 
 <br/>
 
-![右键删除](./img/del.png)
+![右键删除](images/del.png)
 
 <br/>
 
-![删除提示](./img/del_res.png)
+![删除提示](images/del_res.png)
 
 <br/>
 
@@ -28,7 +28,7 @@ vscode 插件
 
 <br/>
 
-![跳转依赖](./img/dep.png)
+![跳转依赖](images/dep.png)
 
 <br/>
 <br/>
