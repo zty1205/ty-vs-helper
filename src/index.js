@@ -1,6 +1,7 @@
 const vscode = require('vscode');
 const deleteLocalBranch = require('./features/deleteLocalBranch');
 const jumpDependencies = require('./features/jumpDependencies');
+const gitPush = require('./features/gitPush');
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -8,6 +9,7 @@ const jumpDependencies = require('./features/jumpDependencies');
 function activate(context) {
   deleteLocalBranch(context);
   jumpDependencies(context);
+  gitPush(context);
 }
 
 function deactivate() {}

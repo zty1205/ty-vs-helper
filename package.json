@@ -2,7 +2,7 @@
   "name": "ty-helper",
   "displayName": "Ty Helper",
   "description": "Ty Helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {
@@ -32,6 +32,7 @@
   ],
   "activationEvents": [
     "onCommand:ty-helper.DeleteLocalBranch",
+    "onCommand:ty-helper.GitPush",
     "onLanguage:json"
   ],
   "main": "./src/index.js",
@@ -40,6 +41,10 @@
       {
         "command": "ty-helper.DeleteLocalBranch",
         "title": "删除本地分支"
+      },
+      {
+        "command": "ty-helper.GitPush",
+        "title": "Git 一键 Push"
       }
     ],
     "menus": {
@@ -48,8 +53,23 @@
           "when": "editorFocus",
           "command": "ty-helper.DeleteLocalBranch",
           "group": "navigation"
+        },
+        {
+          "when": "editorFocus",
+          "command": "ty-helper.GitPush",
+          "group": "navigation"
         }
       ]
+    },
+    "configuration": {
+      "title": "Ty Helper",
+      "properties": {
+        "ty-helper.GitPush.commitizen": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否需要commitizen"
+        }
+      }
     }
   },
   "scripts": {

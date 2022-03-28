@@ -31,6 +31,34 @@ vscode 插件
 ![跳转依赖](images/dep.png)
 
 <br/>
+
+- git 一键 push
+
+操作：cmd + 鼠标悬浮显示，点击跳转
+
+<br/>
+
+![点击](images/push_command.png)
+
+<br/>
+
+选择 commit type (可配置，默认不启用)
+
+![点击](images/push_commit.png)
+
+<br/>
+
+输入 msg
+
+![点击](images/push_msg.png)
+
+<br/>
+
+显示结果
+
+![点击](images/push_result.png)
+
+<br/>
 <br/>
 
 ## Requirements
