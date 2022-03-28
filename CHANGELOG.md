@@ -4,6 +4,15 @@ All notable changes to the "ty-helper" extension will be documented in this file
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+# 0.0.1
 
-- Initial release
+## Features
+
+- 支持 package.json 依赖跳转
+- 支持删除本地分支
+
+# 0.0.2
+
+## Features
+
+- 支持 git 一键 push
