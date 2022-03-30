@@ -29,11 +29,22 @@ async function gitPush() {
   const rootPath = utils.getProjectPath();
 
   try {
-    const result = child.execSync(`cd ${rootPath}\ngit add .\ngit commit -m '${gitMsg}'`, { encoding: 'utf-8' });
+    const result = child.execSync(`cd ${rootPath}\ngit add .\ngit commit -m '${gitMsg}'\ngit push`, {
+      encoding: 'utf-8'
+    });
     let msgArr = result.split('\n');
     vscode.window.showInformationMessage(msgArr && msgArr[1] ? msgArr && msgArr[1] : 'push 成功');
   } catch (e) {
-    vscode.window.showWarningMessage('无文件更改or提交失败！');
+    let msg = '没有文件更改or提交失败！';
+    if (e && e.message) {
+      let arr = e.message.split('\n');
+      if (arr.length > 4) {
+        msg = arr.slice(4).join('\n');
+      } else {
+        msg = e.message;
+      }
+    }
+    vscode.window.showWarningMessage(msg);
   }
 }
 

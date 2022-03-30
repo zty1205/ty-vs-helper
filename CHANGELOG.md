@@ -16,3 +16,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## Features
 
 - 支持 git 一键 push
+
+# 0.0.3
+
+## Features
+
+- 优化 push 失败提示
+
+## Fix
+
+- fix push 命令
