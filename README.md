@@ -59,6 +59,24 @@ vscode 插件
 ![点击](images/push_result.png)
 
 <br/>
+
+- 转换功能
+  - URL 解码
+  - URL 编码
+  - 蛇形大写命名
+  - 蛇形命名
+  - 帕斯卡命名
+  - 驼峰命名
+
+1. 选择变量，url
+2. 右键点击
+
+<br/>
+
+![点击](images/transform.png)
+
+<br/>
+
 <br/>
 
 ## Requirements

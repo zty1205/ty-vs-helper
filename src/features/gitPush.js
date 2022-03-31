@@ -49,7 +49,6 @@ async function gitPush() {
 }
 
 module.exports = function (context) {
-  // 注册如何实现跳转到定义，第一个参数表示仅对json文件生效
   const disposable = vscode.commands.registerCommand('ty-helper.GitPush', function (dispose) {
     gitPush.apply(this, [dispose, context]);
   });

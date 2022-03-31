@@ -2,7 +2,7 @@
   "name": "ty-helper",
   "displayName": "Ty Helper",
   "description": "Ty Helper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {
@@ -33,6 +33,12 @@
   "activationEvents": [
     "onCommand:ty-helper.DeleteLocalBranch",
     "onCommand:ty-helper.GitPush",
+    "onCommand:ty-helper.EncodeURIComponent",
+    "onCommand:ty-helper.DecodeURIComponent",
+    "onCommand:ty-helper.SnakeUpper",
+    "onCommand:ty-helper.Snake",
+    "onCommand:ty-helper.Pascal",
+    "onCommand:ty-helper.CamelCase",
     "onLanguage:json"
   ],
   "main": "./src/index.js",
@@ -40,11 +46,43 @@
     "commands": [
       {
         "command": "ty-helper.DeleteLocalBranch",
-        "title": "删除本地分支"
+        "title": "删除本地分支",
+        "category": "Git"
       },
       {
         "command": "ty-helper.GitPush",
-        "title": "Git 一键 Push"
+        "title": "Git 一键 Push",
+        "category": "Git"
+      },
+      {
+        "command": "ty-helper.EncodeURIComponent",
+        "title": "URL编码",
+        "category": "Transform"
+      },
+      {
+        "command": "ty-helper.DecodeURIComponent",
+        "title": "URL解码",
+        "category": "Transform"
+      },
+      {
+        "command": "ty-helper.SnakeUpper",
+        "title": "蛇形大写命名",
+        "category": "Transform"
+      },
+      {
+        "command": "ty-helper.Snake",
+        "title": "蛇形命名",
+        "category": "Transform"
+      },
+      {
+        "command": "ty-helper.Pascal",
+        "title": "帕斯卡命名",
+        "category": "Transform"
+      },
+      {
+        "command": "ty-helper.CamelCase",
+        "title": "驼峰命名",
+        "category": "Transform"
       }
     ],
     "menus": {
@@ -58,6 +96,42 @@
           "when": "editorFocus",
           "command": "ty-helper.GitPush",
           "group": "navigation"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "ty-helper.EncodeURIComponent",
+          "alt": "ty-helper.EncodeURIComponent",
+          "group": "7_modification@1"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "ty-helper.DecodeURIComponent",
+          "alt": "ty-helper.DecodeURIComponent",
+          "group": "7_modification@2"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "ty-helper.SnakeUpper",
+          "alt": "ty-helper.SnakeUpper",
+          "group": "7_modification@3"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "ty-helper.Snake",
+          "alt": "ty-helper.Snake",
+          "group": "7_modification@4"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "ty-helper.Pascal",
+          "alt": "ty-helper.Pascal",
+          "group": "7_modification@5"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "ty-helper.CamelCase",
+          "alt": "ty-helper.CamelCase",
+          "group": "7_modification@6"
         }
       ]
     },

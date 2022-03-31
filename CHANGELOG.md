@@ -26,3 +26,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## Fix
 
 - fix push 命令
+
+# 0.0.4
+
+## Features
+
+- 添加转换功能
+  - URL 解码
+  - URL 编码
+  - 蛇形大写命名
+  - 蛇形命名
+  - 帕斯卡命名
+  - 驼峰命名
