@@ -4,7 +4,7 @@ const utils = require('../../../util/index');
 const { COMMITIZEN } = require('../../../constants');
 
 module.exports = async function () {
-  const needCommitizen = vscode.workspace.getConfiguration().get('ty-helper.GitPush.commitizen');
+  const needCommitizen = utils.getConfiguration('ty-helper.OnePush.commitizen');
 
   let commit = 'feat';
   if (needCommitizen) {
