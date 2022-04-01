@@ -38,3 +38,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
   - 蛇形命名
   - 帕斯卡命名
   - 驼峰命名
+
+# 0.1.0
+
+## Refactor
+
+- 项目架构调整

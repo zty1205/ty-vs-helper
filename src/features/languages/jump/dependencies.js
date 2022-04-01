@@ -8,9 +8,7 @@ function provideDefinition(document, position, token) {
   const word = document.getText(document.getWordRangeAtPosition(position));
   const line = document.lineAt(position);
 
-  // 只处理package.json文件
   if (/\/package\.json$/.test(fileName)) {
-    console.log(word, line.text);
     const json = document.getText();
     if (
       new RegExp(
@@ -27,11 +25,5 @@ function provideDefinition(document, position, token) {
   }
 }
 
-module.exports = function (context) {
-  // 注册如何实现跳转到定义，第一个参数表示仅对json文件生效
-  context.subscriptions.push(
-    vscode.languages.registerDefinitionProvider(['json'], {
-      provideDefinition
-    })
-  );
-};
+exports.JDSelector = ['json'];
+exports.JDProvider = { provideDefinition };

@@ -12,6 +12,19 @@ exports.getProjectPath = function () {
 
 // 分割字符串为多个单词
 // 分割标准 - _ 或 遇到大写字母
-exports.splitWords = function (text) {
-  return text.match(/([^\s\-_A-Z]+)|([A-Z]+[^\s\-_A-Z]*)/g) || [];
+
+exports.registerCommand = function (context, name, transformFunction) {
+  const disposable = vscode.commands.registerCommand(`ty-helper.${name}`, function (dispose) {
+    transformFunction.apply(this, [dispose, context]);
+  });
+
+  context.subscriptions.push(disposable);
+};
+
+exports.registerCommand = function (context, name, transformFunction) {
+  context.subscriptions.push(vscode.commands.registerCommand(`ty-helper.${name}`, transformFunction));
+};
+
+exports.registerDefinitionProvider = function (context, selector, provider) {
+  context.subscriptions.push(vscode.languages.registerDefinitionProvider(selector, provider));
 };

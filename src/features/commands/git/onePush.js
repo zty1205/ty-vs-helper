@@ -1,10 +1,9 @@
 const vscode = require('vscode');
-const path = require('path');
 var child = require('child_process');
-const utils = require('../util/index');
-const { COMMITIZEN } = require('../constants');
+const utils = require('../../../util/index');
+const { COMMITIZEN } = require('../../../constants');
 
-async function gitPush() {
+module.exports = async function () {
   const needCommitizen = vscode.workspace.getConfiguration().get('ty-helper.GitPush.commitizen');
 
   let commit = 'feat';
@@ -46,12 +45,4 @@ async function gitPush() {
     }
     vscode.window.showWarningMessage(msg);
   }
-}
-
-module.exports = function (context) {
-  const disposable = vscode.commands.registerCommand('ty-helper.GitPush', function (dispose) {
-    gitPush.apply(this, [dispose, context]);
-  });
-
-  context.subscriptions.push(disposable);
 };
