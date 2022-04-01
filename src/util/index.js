@@ -28,3 +28,7 @@ exports.registerCommand = function (context, name, transformFunction) {
 exports.registerDefinitionProvider = function (context, selector, provider) {
   context.subscriptions.push(vscode.languages.registerDefinitionProvider(selector, provider));
 };
+
+exports.getConfiguration = function (key = '') {
+  return vscode.workspace.getConfiguration().get(key);
+};

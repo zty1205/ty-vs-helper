@@ -44,3 +44,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## Refactor
 
 - 项目架构调整
+
+# 0.1.1
+
+## Features
+
+- 添加解析 url 为对象
+
+## Fix
+
+- 修改 OnePush 的配置项命名问题

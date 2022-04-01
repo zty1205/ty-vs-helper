@@ -2,7 +2,7 @@
   "name": "ty-helper",
   "displayName": "Ty Helper",
   "description": "Ty Helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {
@@ -62,6 +62,11 @@
       {
         "command": "ty-helper.DecodeURIComponent",
         "title": "URL解码",
+        "category": "Transform"
+      },
+      {
+        "command": "ty-helper.UrlParse",
+        "title": "URL解析",
         "category": "Transform"
       },
       {
@@ -132,6 +137,12 @@
           "command": "ty-helper.CamelCase",
           "alt": "ty-helper.CamelCase",
           "group": "7_modification@6"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "ty-helper.UrlParse",
+          "alt": "ty-helper.UrlParse",
+          "group": "7_modification@7"
         }
       ]
     },
@@ -141,6 +152,11 @@
         "ty-helper.OnePush.commitizen": {
           "type": "boolean",
           "default": false,
+          "description": "是否需要commitizen"
+        },
+        "ty-helper.UrlParse.deep": {
+          "type": "boolean",
+          "default": true,
           "description": "是否需要commitizen"
         }
       }

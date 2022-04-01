@@ -77,6 +77,18 @@ vscode 插件
 
 <br/>
 
+- url 解析功能
+
+选中相应的 url 后右键点击选择`URL解析`
+
+例子：对应 url https://www.abc.com?_t=1&arr=1&arr=2&url=https%3A%2F%2Fwww.123.com%3Fs%3D996，解析结果如下
+
+<br/>
+
+![点击](images/url_parse.png)
+
+<br/>
+
 <br/>
 
 ## Requirements
