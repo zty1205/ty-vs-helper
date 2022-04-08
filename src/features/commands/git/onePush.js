@@ -28,7 +28,14 @@ module.exports = async function () {
   const rootPath = utils.getProjectPath();
 
   try {
-    const result = child.execSync(`cd ${rootPath}\ngit add .\ngit commit -m '${gitMsg}'\ngit push`, {
+    const cmd = utils.buildSHCommand([
+      `cd ${rootPath}`,
+      'git pull',
+      'git add .',
+      `git commit -m ${gitMsg}`,
+      'git push'
+    ]);
+    const result = child.execSync(cmd, {
       encoding: 'utf-8'
     });
     let msgArr = result.split('\n');

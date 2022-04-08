@@ -32,3 +32,7 @@ exports.registerDefinitionProvider = function (context, selector, provider) {
 exports.getConfiguration = function (key = '') {
   return vscode.workspace.getConfiguration().get(key);
 };
+
+exports.buildSHCommand = function (array = []) {
+  return array.join('\n');
+};
