@@ -1,0 +1,31 @@
+{
+  "vue-store": {
+    "prefix": "vue-store",
+    "body": [
+      "const state = {$1};",
+      "",
+      "const getters = {$2};",
+      "",
+      "const mutations = {$3};",
+      "",
+      "const actions = {$4};",
+      "",
+      "const modules = {$5};",
+      "",
+      "export default {",
+      "  namespaced: true,",
+      "  state,",
+      "  getters,",
+      "  mutations,",
+      "  actions,",
+      "  modules",
+      "};"
+    ],
+    "description": "vue store 代码片段"
+  },
+  "arr-reduce": {
+    "prefix": "arr-reduce",
+    "body": ["array.reduce((pre, cur, idx) => {", "  pre[cur$1] = idx$2;", "  return pre$3;", "}, {});"],
+    "description": "js 数组 reduce"
+  }
+}

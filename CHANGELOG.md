@@ -54,3 +54,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## Fix
 
 - 修改 OnePush 的配置项命名问题
+
+# 0.1.2
+
+## Features
+
+- 新增代码片段
+  - vue store
+  - arr reduce
+
+## Fix
+
+- push 前先进行 pull 操作

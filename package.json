@@ -2,7 +2,7 @@
   "name": "ty-helper",
   "displayName": "Ty Helper",
   "description": "Ty Helper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {
@@ -160,7 +160,13 @@
           "description": "是否需要commitizen"
         }
       }
-    }
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./src/snippets/javascript.json"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
