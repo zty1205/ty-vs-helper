@@ -1,8 +1,8 @@
 {
   "name": "ty-helper",
   "displayName": "Ty Helper",
-  "description": "Ty Helper",
-  "version": "0.1.2",
+  "description": "vscode插件，代码开发小帮手",
+  "version": "0.1.3",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {

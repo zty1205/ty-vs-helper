@@ -66,3 +66,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## Fix
 
 - push 前先进行 pull 操作
+
+# 0.1.3
+
+## Fix
+
+- push 的 commit-msg 问题

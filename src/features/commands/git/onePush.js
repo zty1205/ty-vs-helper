@@ -32,14 +32,14 @@ module.exports = async function () {
       `cd ${rootPath}`,
       'git pull',
       'git add .',
-      `git commit -m ${gitMsg}`,
+      `git commit -m '${gitMsg}'`,
       'git push'
     ]);
     const result = child.execSync(cmd, {
       encoding: 'utf-8'
     });
-    let msgArr = result.split('\n');
-    vscode.window.showInformationMessage(msgArr && msgArr[1] ? msgArr && msgArr[1] : 'push 成功');
+
+    vscode.window.showInformationMessage(result.split('\n').filter(Boolean).pop() || 'push 成功');
   } catch (e) {
     let msg = '没有文件更改or提交失败！';
     if (e && e.message) {
