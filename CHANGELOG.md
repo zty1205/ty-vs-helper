@@ -72,3 +72,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## Fix
 
 - push 的 commit-msg 问题
+
+# 0.1.4
+
+## Refactor
+
+- one-push 重构，使用 task 处理命令，解决 child_process 执行命令停滞的问题

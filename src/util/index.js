@@ -33,6 +33,6 @@ exports.getConfiguration = function (key = '') {
   return vscode.workspace.getConfiguration().get(key);
 };
 
-exports.buildSHCommand = function (array = []) {
-  return array.join('\n');
+exports.buildSHCommand = function (array = [], sp = ';') {
+  return array.join(sp);
 };
