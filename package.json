@@ -2,7 +2,7 @@
   "name": "ty-helper",
   "displayName": "Ty Helper",
   "description": "vscode插件，代码开发小帮手",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {
@@ -154,10 +154,20 @@
           "default": false,
           "description": "是否需要commitizen"
         },
+        "ty-helper.OnePush.pushImmediately": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否commit后立即提交"
+        },
+        "ty-helper.OnePush.changeLog": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否需要同时生成changeLog(仅在md文件存在时有效)"
+        },
         "ty-helper.UrlParse.deep": {
           "type": "boolean",
           "default": true,
-          "description": "是否需要commitizen"
+          "description": "是否需要深度解析url"
         }
       }
     },
@@ -186,5 +196,8 @@
     "typescript": "^4.1.3",
     "vscode-test": "^1.5.0"
   },
-  "publisher": "tengyuezhang"
+  "publisher": "tengyuezhang",
+  "dependencies": {
+    "dayjs": "^1.11.1"
+  }
 }

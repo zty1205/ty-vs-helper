@@ -2,6 +2,9 @@ const vscode = require('vscode');
 var child = require('child_process');
 const utils = require('../../../util/index');
 const { COMMITIZEN } = require('../../../constants');
+const { appendFileByPath, getPackageJson } = require('../../../util/file');
+const dayjs = require('dayjs');
+const { transPascal } = require('../../../util/word');
 
 /**
  * @deprecated
@@ -32,11 +35,34 @@ function runByChildProcess(gitMsg = '') {
 }
 
 function runByTask(gitMsg = '') {
-  const cmd = utils.buildSHCommand(['git pull', 'git add .', `git commit -m '${gitMsg}'`, 'git push']);
+  const sh = ['git pull', 'git add .', `git commit -m '${gitMsg}'`];
+
+  const pushImmediately = utils.getConfiguration('ty-helper.OnePush.pushImmediately');
+  if (pushImmediately) {
+    sh.push('git push');
+  }
+
+  const cmd = utils.buildSHCommand(sh);
 
   vscode.tasks.executeTask(
     new vscode.Task({ type: 'shell' }, vscode.TaskScope.Workspace, 'TyHelper', 'sh', new vscode.ShellExecution(cmd))
   );
+}
+
+async function runChangeMd(commit = '', gitMsg = '') {
+  const needChange = utils.getConfiguration('ty-helper.OnePush.changeLog');
+  if (!needChange) return;
+
+  let package = await getPackageJson();
+
+  const content = `\n# ${package.version} (${dayjs(new Date()).format('YYYY-MM-DD')})\n\n## ${transPascal(
+    commit
+  )} \n\n${gitMsg
+    .split(/[;；]/)
+    .map((x) => `- ${x}\n`)
+    .join('')}\n`;
+
+  return appendFileByPath('./CHANGELOG.md', content, '不存在CHANGELOG.md文件');
 }
 
 module.exports = async function () {
@@ -60,6 +86,8 @@ module.exports = async function () {
   if (needCommitizen && gitMsg.indexOf(commit) < 0) {
     gitMsg = `${commit}: ${gitMsg}`;
   }
+
+  await runChangeMd(commit, gitMsg);
 
   runByTask(gitMsg);
 };

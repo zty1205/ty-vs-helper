@@ -78,3 +78,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## Refactor
 
 - one-push 重构，使用 task 处理命令，解决 child_process 执行命令停滞的问题
+
+# 0.1.5 (2022-04-22)
+
+## Feat
+
+- one-push 新增 changelog 功能(可配置)
+- one-push 新增配置 是否立即 push
