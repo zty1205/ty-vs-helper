@@ -42,10 +42,6 @@ exports.baseBuild = function (transformFunction) {
   });
 };
 
-exports.splitWords = function (text) {
-  return text.match(/([^\s\-_A-Z]+)|([A-Z]+[^\s\-_A-Z]*)/g) || [];
-};
-
 function isLink(url = '') {
   return /(file)|(https?):\/\//.test(url);
 }
