@@ -2,6 +2,7 @@ const vscode = require('vscode');
 const path = require('path');
 const { getConfiguration } = require('../../../util');
 const { baseTransform, baseBuild, urlParse, isLink } = require('./util');
+const { formatJSONText } = require('../../../util/format');
 
 exports.transformEncodeURIComponent = () => baseTransform(encodeURIComponent);
 exports.transformDecodeURIComponent = () => baseTransform(decodeURIComponent);
@@ -15,7 +16,7 @@ exports.transformUrlToObject = (content) => {
     const result = urlParse(text, {}, getConfiguration('ty-helper.UrlParse.deep'));
     let file = vscode.Uri.file(path.resolve(content.fsPath, `../urlParse_${Date.now()}.json`));
 
-    await vscode.workspace.fs.writeFile(file, new Uint8Array(Buffer.from(JSON.stringify(result))));
+    await vscode.workspace.fs.writeFile(file, new Uint8Array(Buffer.from(formatJSONText(JSON.stringify(result)))));
 
     await vscode.window.showTextDocument(file);
   });

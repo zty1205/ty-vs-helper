@@ -85,3 +85,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - one-push 新增 changelog 功能(可配置)
 - one-push 新增配置 是否立即 push
+
+# 0.1.6 (2022-04-28)
+
+## Feat 
+
+- feat: 对解析后生成的url对象进行格式化
+
