@@ -2,6 +2,11 @@
 
 vscode 插件
 
+## How To Use
+
+- vscode 插件搜索 Ty Helper 安装即可
+- 下载项目后，运行 npm run build, 右键 visx 文件安装
+
 <br/>
 
 ## Features
