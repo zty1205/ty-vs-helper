@@ -2,7 +2,7 @@
   "name": "ty-helper",
   "displayName": "Ty Helper",
   "description": "vscode插件，代码开发小帮手",
-  "version": "0.1.8",
+  "version": "0.1.6",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {
@@ -207,11 +207,6 @@
   "publisher": "tengyuezhang",
   "dependencies": {
     "dayjs": "^1.11.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-customizable"
-    }
   },
   "husky": {
     "hooks": {
