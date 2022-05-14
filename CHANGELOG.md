@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.7 (2022-05-14)
+
+
+### Features
+
+* 对解析后生成的url对象进行格式化 ([91e5479](https://github.com/zty1205/ty-vs-helper/commit/91e5479ab55de1e468ace8bf33b43903395f5063))
+* 解析 url 为对象 ([ba5f65a](https://github.com/zty1205/ty-vs-helper/commit/ba5f65aec2cfebf1314731850711bd83cc0951e0))
+* 添加git一键push功能 ([7b59047](https://github.com/zty1205/ty-vs-helper/commit/7b590470830dc18d25bd51a331ead34c3cadb3bc))
+* 新增代码片段 ([ce57430](https://github.com/zty1205/ty-vs-helper/commit/ce574300487737553cd165e12829e4ee1fdc8373))
+* 转换功能 ([b992491](https://github.com/zty1205/ty-vs-helper/commit/b992491b7eccf212d1145a4b3fffb3eda6fda390))
+* init ([2b54130](https://github.com/zty1205/ty-vs-helper/commit/2b54130dc652741222c2b1b3fa8b26973f0c3ca1))
+* one-push 新增changelog ([5060c2d](https://github.com/zty1205/ty-vs-helper/commit/5060c2ded3761b0100a256b5fc5eef3120b062a8))
+
+
+### Bug Fixes
+
+* 修改 OnePush 的配置项命名问题 ([f2f92f0](https://github.com/zty1205/ty-vs-helper/commit/f2f92f04a5a5ce673be45fefb29677b39ad2c192))
+* push 的 commit-msg 问题 ([eb56a00](https://github.com/zty1205/ty-vs-helper/commit/eb56a0042ebef158858aeb5404a1ff13b6953c9f))
+* push 前先进行 pull 操作 ([b6ac2c5](https://github.com/zty1205/ty-vs-helper/commit/b6ac2c59e5fbb99f7946ba6e5ae444ffd2b3a3be))
+* push命令 ([184febb](https://github.com/zty1205/ty-vs-helper/commit/184febb74cfc50b70cb4fc7589435e58ce0884ab))
+
 ### 0.1.8 (2022-05-13)
 
 
