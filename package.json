@@ -2,7 +2,7 @@
   "name": "ty-helper",
   "displayName": "Ty Helper",
   "description": "vscode插件，代码开发小帮手",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "icon": "images/icon.png",
   "author": "zty<https://github.com/zty1205>",
   "repository": {
@@ -39,7 +39,10 @@
     "onCommand:ty-helper.Snake",
     "onCommand:ty-helper.Pascal",
     "onCommand:ty-helper.CamelCase",
-    "onLanguage:json"
+    "onLanguage:json",
+    "onLanguage:vue",
+    "onLanguage:javascript",
+    "onLanguage:jsx"
   ],
   "main": "./src/index.js",
   "contributes": {
@@ -168,6 +171,13 @@
           "type": "boolean",
           "default": true,
           "description": "是否需要深度解析url"
+        },
+        "ty-helper.JumpImport.alias": {
+          "type": "object",
+          "default": {
+            "@": "./src"
+          },
+          "description": "跳转时路径别名"
         }
       }
     },

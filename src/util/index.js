@@ -33,11 +33,16 @@ function buildSHCommand(array = [], sp = ';') {
   return array.join(sp);
 }
 
+function registerHoverProvider(context, selector, provider) {
+  context.subscriptions.push(vscode.languages.registerHoverProvider(selector, provider));
+}
+
 module.exports = {
   getProjectPath,
   getProjectUri,
   registerCommand,
   registerDefinitionProvider,
   getConfiguration,
-  buildSHCommand
+  buildSHCommand,
+  registerHoverProvider
 };

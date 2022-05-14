@@ -1,4 +1,4 @@
-exports.COMMITIZEN = [
+const COMMITIZEN = [
   'feat: 新增了一个功能',
   'fix: 修复了一个 bug',
   'docs: 更改文档',
@@ -11,3 +11,10 @@ exports.COMMITIZEN = [
   'chore: 其他不修改src或test文件',
   'revert: commit 回退'
 ];
+
+const PATH_EXTS = ['.vue', '.js', 'jsx', '/index.vue', '/index.js', '/index.jsx', '.css', '/index.css'];
+
+module.exports = {
+  COMMITIZEN,
+  PATH_EXTS
+};

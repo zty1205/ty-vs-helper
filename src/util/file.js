@@ -31,8 +31,8 @@ async function appendFileByPath(path, data, notFundMsg) {
 
 async function getPackageJson() {
   try {
-    const package = await readFile(vscode.Uri.joinPath(getProjectUri(), './package.json'));
-    return JSON.parse(package.toString());
+    const packageJson = await readFile(vscode.Uri.joinPath(getProjectUri(), './package.json'));
+    return JSON.parse(packageJson.toString());
   } catch (e) {
     if (e.code === 'FileNotFound' || e.message.indexOf('ENOENT')) {
       vscode.window.showWarningMessage('package.json文件不存在');
@@ -41,10 +41,33 @@ async function getPackageJson() {
   }
 }
 
+async function isExist(uri) {
+  return new Promise((resolve) => {
+    vscode.workspace.fs.stat(uri).then(
+      () => resolve(true),
+      () => resolve(false)
+    );
+  });
+}
+
+async function jumpFileByPath(path) {
+  return jumpFile(vscode.Uri.file(path));
+}
+
+async function jumpFile(uri) {
+  const isEx = await isExist(uri);
+  if (isEx) {
+    return new vscode.Location(uri, new vscode.Position(0, 0));
+  }
+}
+
 module.exports = {
   writeFile,
   readFile,
   appendFile,
   appendFileByPath,
-  getPackageJson
+  getPackageJson,
+  isExist,
+  jumpFileByPath,
+  jumpFile
 };

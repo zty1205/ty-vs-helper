@@ -94,6 +94,16 @@ vscode 插件
 
 <br/>
 
+- 支持项目内 import 文件的预览和跳转
+
+<br/>
+
+![点击](images/import_hover.png)
+
+<br/>
+
+![点击](images/import_jump.png)
+
 <br/>
 
 ## Requirements
