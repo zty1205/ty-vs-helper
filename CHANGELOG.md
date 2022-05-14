@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.2.0 (2022-05-14)
+
+### Features
+
+- 对解析后生成的 url 对象进行格式化 ([91e5479](https://github.com/zty1205/ty-vs-helper/commit/91e5479ab55de1e468ace8bf33b43903395f5063))
+
 ### 0.1.7 (2022-05-14)
 
 ### Features
