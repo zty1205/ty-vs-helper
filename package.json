@@ -152,6 +152,11 @@
     "configuration": {
       "title": "Ty Helper",
       "properties": {
+        "ty-helper.global.ts": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否使用ts"
+        },
         "ty-helper.OnePush.commitizen": {
           "type": "boolean",
           "default": false,
@@ -178,6 +183,16 @@
             "@": "./src"
           },
           "description": "跳转时路径别名"
+        },
+        "ty-helper.JumpVuex.maxCache": {
+          "type": "number",
+          "default": 5,
+          "description": "文件引用多少次后刷新"
+        },
+        "ty-helper.JumpVuex.findPath": {
+          "type": "array",
+          "default": [],
+          "description": "额外的文件路径数组，最多5项"
         }
       }
     },

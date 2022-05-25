@@ -14,7 +14,16 @@ const COMMITIZEN = [
 
 const PATH_EXTS = ['.vue', '.js', 'jsx', '/index.vue', '/index.js', '/index.jsx', '.css', '/index.css'];
 
+// vuex文件查找顺序
+const STORE_FIND_PATH = ['./src/store/index', './src/store'];
+const NAMESPACE_STORE_FIND_PATH = ['./src/store', './src/store/modules'];
+// vuex文件默认刷新引用次数
+const STORE_MAX_CACHE = 5;
+
 module.exports = {
   COMMITIZEN,
-  PATH_EXTS
+  PATH_EXTS,
+  STORE_FIND_PATH,
+  NAMESPACE_STORE_FIND_PATH,
+  STORE_MAX_CACHE
 };

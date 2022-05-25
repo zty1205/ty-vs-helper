@@ -37,6 +37,11 @@ function registerHoverProvider(context, selector, provider) {
   context.subscriptions.push(vscode.languages.registerHoverProvider(selector, provider));
 }
 
+function getCfgNTNumber(key = '', def = 0) {
+  const num = vscode.workspace.getConfiguration().get(key);
+  return num == null || num < 0 ? def : num;
+}
+
 module.exports = {
   getProjectPath,
   getProjectUri,
@@ -44,5 +49,6 @@ module.exports = {
   registerDefinitionProvider,
   getConfiguration,
   buildSHCommand,
-  registerHoverProvider
+  registerHoverProvider,
+  getCfgNTNumber
 };

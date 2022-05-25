@@ -106,6 +106,8 @@ vscode 插件
 
 <br/>
 
+- 支持 vuex mapXXX 函数的跳转
+
 ## Requirements
 
 If you have any requirements or dependencies, add a section describing those and how to install and configure them.
