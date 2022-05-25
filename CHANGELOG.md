@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/zty1205/ty-vs-helper/compare/v0.2.0...v0.2.1) (2022-05-25)
+
+
+### Features
+
+* 支持vuex mapXXX函数跳转 ([adabfb9](https://github.com/zty1205/ty-vs-helper/commit/adabfb9bfab99b20cd17c4651dd3f26271443fdb))
+
 ### 0.2.0 (2022-05-14)
 
 ### Features
